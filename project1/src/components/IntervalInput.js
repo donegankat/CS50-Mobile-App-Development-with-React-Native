@@ -2,18 +2,20 @@ import * as React from 'react';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
 import PropTypes from "prop-types"
 
-propTypes = {
-    timerIntervalType: PropTypes.string.isRequired,
-    onChangeText: PropTypes.func.isRequired,
-    val: PropTypes.number
-}
-
-export default props => (
+const IntervalInput = props => (
     <View style={styles.row}>
         <Text style={styles.label}>{props.timeIntervalType}:</Text>
         <TextInput value={props.val?.toString()} onChangeText={props.onChangeText} style={styles.input}></TextInput>
     </View>
 )
+
+IntervalInput.propTypes = {
+    timerIntervalType: PropTypes.string.isRequired,
+    onChangeText: PropTypes.func.isRequired,
+    val: PropTypes.number
+}
+
+export default IntervalInput
 
 const styles = StyleSheet.create({
     row: {

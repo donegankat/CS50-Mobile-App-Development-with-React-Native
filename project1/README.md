@@ -11,6 +11,7 @@ This includes the extra challenge.
 3. Optionally install the Expo app on your Android or iOS device and sign into your Expo account
 4. Clone this repository
 5. Using the command line, cd to the `cs50-react-native-mobile-app-development/project1` directory
+6. Run `npm install`
 6. Run `npm start`
 7. To view the project in a web browser, click "Run in web browser" in the window that opens. To run on your Android or iOS device, just open the app on your device and you should be able to see all projects you currently have open on your computer. Simply tap on "project1"
 
