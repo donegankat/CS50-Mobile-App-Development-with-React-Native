@@ -5,12 +5,17 @@ import PropTypes from "prop-types"
 const IntervalInput = props => (
     <View style={styles.row}>
         <Text style={styles.label}>{props.timeIntervalType}:</Text>
-        <TextInput value={props.val?.toString()} onChangeText={props.onChangeText} style={styles.input}></TextInput>
+        <TextInput
+            value={props.val?.toString()}
+            onChangeText={props.onChangeText}
+            style={styles.input}
+            keyboardType="numeric"
+        />
     </View>
 )
 
 IntervalInput.propTypes = {
-    timerIntervalType: PropTypes.string.isRequired,
+    timeIntervalType: PropTypes.string.isRequired,
     onChangeText: PropTypes.func.isRequired,
     val: PropTypes.number
 }
