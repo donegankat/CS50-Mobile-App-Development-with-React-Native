@@ -58,7 +58,7 @@ export default class MovieDetailsScreen extends React.Component {
             } else if (metaScoreInt >= 30) {
                 metaScoreIcon = "thumbs-up-down";
                 metaScoreColor = "goldenrod";
-            } else {
+            } else if (this.state.movie.Metascore !== "N/A") {
                 metaScoreIcon = "thumb-down";
                 metaScoreColor = "crimson";
             }
@@ -69,7 +69,7 @@ export default class MovieDetailsScreen extends React.Component {
             } else if (imdbScoreInt >= 3) {
                 imdbScoreIcon = "thumbs-up-down";
                 imdbScoreColor = "goldenrod";
-            } else {
+            } else if (this.state.movie.imdbRating !== "N/A") {
                 imdbScoreIcon = "thumb-down";
                 imdbScoreColor = "crimson";
             }
@@ -93,6 +93,7 @@ export default class MovieDetailsScreen extends React.Component {
                                 />
                             </TouchableOpacity>
                             <View style={styles.basicInfoContainer}>
+                                <Text style={styles.genre}>{this.state.movie.Genre}</Text>
                                 <LabelledText label={directorLabel} text={this.state.movie.Director} />
                                 <LabelledText label={writerLabel} text={this.state.movie.Writer} />
                                 <LabelledText label="Stars" text={this.state.movie.Actors} />
@@ -100,7 +101,7 @@ export default class MovieDetailsScreen extends React.Component {
                         </View>
 
                         <View style={styles.summaryContainer}>
-                        <Text style={styles.genre}>{this.state.movie.Genre}</Text>
+                            {/* <Text style={styles.genre}>{this.state.movie.Genre}</Text> */}
                             <Text>{this.state.movie.Plot}</Text>
                         </View>
 
@@ -144,7 +145,7 @@ const styles = StyleSheet.create({
     topContainer: {
         flexDirection: "row",
         // flex: 1,
-        marginBottom: 10
+        marginBottom: 20
     },
     poster: {
         width: 85,
@@ -154,15 +155,14 @@ const styles = StyleSheet.create({
     },
     genre: {
         marginBottom: 10,
-        alignSelf: "center",
         fontStyle: "italic"
     },
     basicInfoContainer: {
         flex: 1,
-        flexDirection: "column",
+        flexDirection: "column"
     },
     summaryContainer: {
-        marginBottom: 10
+        marginBottom: 20
     },
     sectionHeader: {
         fontSize: 16,

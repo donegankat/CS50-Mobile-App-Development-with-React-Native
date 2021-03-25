@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const styles = StyleSheet.create({
   header: {
-    marginBottom: 10,
+    marginBottom: 20,
     paddingBottom: 10,
     borderBottomColor: "lightgrey",
     borderBottomWidth: 1
