@@ -23,11 +23,11 @@ const styles = StyleSheet.create({
 const MovieDetailHeader = props => (
   <View style={styles.header}>
     <Text style={styles.title}>{props.Title}</Text>
-    <View style={styles.infoContainer}>
+    {/* <View style={styles.infoContainer}>
       <Text>{props.Year}</Text>
       <Text>{props.Rated}</Text>
       <Text>{props.Runtime}</Text>
-    </View>
+    </View> */}
   </View>
 )
 
